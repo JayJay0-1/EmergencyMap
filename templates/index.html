@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> EmergencyMap </title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- biblioteki -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
+        <link rel='stylesheet prefetch' href='http://mrmufflon.github.io/Leaflet.Coordinates/dist/Leaflet.Coordinates-0.1.3.css'>
+        <script src='http://mrmufflon.github.io/Leaflet.Coordinates/dist/Leaflet.Coordinates-0.1.3.min.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!--pliki  -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='icons/herb.png') }}">
+        <!-- IKONY -->
+        <script type="text/javascript" src="{{ url_for('static', filename= '/leflet/src/iconLayers.js' ) }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'leflet/src/iconLayers.css') }}">
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">        
+        <!-- sidebar -->  
+        <link rel="stylesheet" href="{{ url_for('static', filename='leaflet-sidebar-master/src/L.Control.Sidebar.css') }}" />
+        <script src="{{ url_for('static', filename='leaflet-sidebar-master/src/L.Control.Sidebar.js') }}"></script>
+        <!-- STYL POLIGONÓW -->
+        <script src="{{ url_for('static', filename='Leaflet.pattern-master/dist/leaflet.pattern-src.js') }}"></script>      
+</head>
+    <body>
+        <div id="map"> </div>         
+          <div id="sidebar">
+            <h1>leaflet-sidebar</h1>
+          </div>        
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                      <img src="{{ url_for('static', filename='icons/phonee.png') }}"  width="30" height="30" > EmergencyMap
+                </a>                     
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              </ul>
+            </div>
+            </div>
+          </nav>
+              <div class="btn-group-vertical float-end" role="group" aria-label="Vertical button group">
+                   <br>
+                  <a class="button" role="button" id="trasaa" ><img src="{{ url_for('static', filename='icons/navv.png') }}"  width="40" height="40"></a>
+                  <br>
+                  <a class="button" role="button" id="izooo" ><img src="{{ url_for('static', filename='icons/stop.png') }}"  width="40" height="40"></a>
+                  <br>
+                  <a class="button" role="button" id="trspp" ><img src="{{ url_for('static', filename='icons/trspp.png') }}"  width="40" height="40"></a>                     
+                  <br>
+                  <a class="button" role="button" id="Jednostki" ><img src="{{ url_for('static', filename='icons/layerr.png') }}"  width="40" height="40"></a>   
+                   <br>                
+                   <a class="button" role="button" id="clear"><img src="{{ url_for('static', filename='icons/close.png') }}"  width="40" height="40"></a>
+              </div>       
+        <!-- PLIKI -->
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        <script src="{{ url_for('static', filename='formatob.js') }}"></script>
+        <script src="{{ url_for('static', filename='izo.js') }}"></script>
+        <script src="{{ url_for('static', filename='sidebars.js') }}"></script>
+        <script src="{{ url_for('static', filename='iconss.js') }}"></script>
+        <script src="{{ url_for('static', filename='funtrsp.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+      </body>
+</html>            
