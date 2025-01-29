@@ -2,7 +2,7 @@
 var P_icon = L.icon({iconUrl:'/static/icons/poli.png', iconSize:[30,30]});
 var H_icon = L.icon({iconUrl:'/static/icons/hosp.png', iconSize:[30,30]});
 var A_icon = L.icon({iconUrl:'/static/icons/amb.png', iconSize:[30,30]});
-var PSP_icon = L.icon({iconUrl:'/static/icons/PSP.png', iconSize:[30,30]});
+
 var OSP_icon = L.icon({iconUrl:'/static/icons/OSP.png', iconSize:[30,30]});
 var M_icon = L.icon({iconUrl:'/static/icons/military.png', iconSize:[30,30]});
 

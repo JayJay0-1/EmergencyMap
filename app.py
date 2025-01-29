@@ -46,10 +46,6 @@ def get_services():
 def main():
     return render_template('index.html')
 
-
-
-
-
 ################  funkcja trasa
 
 @app.route("/geojson-dijkstra", methods=['GET'])

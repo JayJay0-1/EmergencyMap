@@ -39,7 +39,7 @@ $.getJSON(Poly,function(data){
 // warstwy jednostek 	
 url_J="http://localhost:5000/geojson-services";
 
-var Military_Layer, FireOSP_Layer, Ambulance_Layer, Police_Layer, Hospital_Layer, Fire_Layer;
+var Military_Layer, FireOSP_Layer, Ambulance_Layer, Police_Layer, Hospital_Layer;
 
 
 $.getJSON(url_J,function(data){ 
@@ -115,8 +115,7 @@ function updateWarstwy() {
         'straz': FireOSP_Layer,
         'Karetka': Ambulance_Layer,
         'szpital': Hospital_Layer,
-        'policja': Police_Layer,
-        'PSP':Fire_Layer
+        'policja': Police_Layer
     }} 
 
 

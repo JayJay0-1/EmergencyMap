@@ -56,9 +56,6 @@ function choiceIcon(feature){
         if (feature.properties.emergency == 'fire_brigade')
             return '<img src="/static/icons/OSP.png" width="40" height="40">'
 
-        if (feature.properties.emergency == 'fire_brigade' & feature.properties.id == 22)
-            return '<img src="/static/icons/PSP.png" width="40" height="40">'
-
         if (feature.properties.emergency == 'police')
             return '<img src="/static/icons/police.png" width="40" height="40">'
         if (feature.properties.emergency == 'Hospital')
@@ -156,7 +153,7 @@ function updateJednostki(){
             <img src="/static/icons/OSP.png" width="40" height="40" style="margin-left:2px;" class="me-2">
             <div class="d-flex align-items-center" style="flex-grow: 1; justify-content: space-between;">
                 <label class="form-check-label" for="straz" style="font-size:130%; margin-right: 10px;">
-                    <b>Ochotnicza Straż Pożarna</b>
+                    <b>Straż Pożarna</b>
                 </label>
                 <input class="form-check-input" type="checkbox" id="straz" value="straz" checked style="transform: scale(1.5);">
             </div>
@@ -175,17 +172,6 @@ function updateJednostki(){
         </div>
     </li>
     <br>
-    <li>
-        <div class="d-flex justify-content-between align-items-center">
-            <img src="/static/icons/PSP.png" width="40" height="40" style="margin-left:2px;" class="me-2">
-            <div class="d-flex align-items-center" style="flex-grow: 1; justify-content: space-between;">
-                <label class="form-check-label" for="straz" style="font-size:130%; margin-right: 10px;">
-                    <b>Państwowa Straż Pożarna</b>
-                </label>
-                <input class="form-check-input" type="checkbox" id="PSP" value="PSP" checked style="transform: scale(1.5);">
-            </div>
-        </div>
-    </li>
 </ul>`)
 };
 
@@ -202,13 +188,15 @@ function updateFormatob() {
             '</h6>' +
             '<h6><b>Długość trasy: </b>' +'<br>'+ (routeLength ? routeLength + ' km' : 'Nie obliczono') + '</h6>'+'<br>'+
              '<hr style="height: 10px; color: red; background-color: blue;" />'+
+             '<div class="d-grid gap-2 col-6 mx-auto">'+
+            '<input type="checkbox" class="btn-check" id="fromatob" autocomplete="off" value="fromatob">'+
+            '<label class="btn btn-outline-success" for="fromatob">Wybierz</label>'
+            +'</div>'+
+            '<br>'+
             '<div class="d-grid gap-2 col-6 mx-auto">'+
             `<button type="button" class="btn btn-primary" onclick="map.fitBounds(routeLayer.getBounds());">Przybliż</button>`+
-            '</div>'+
-            '<br>'+
-           '<div class="d-grid gap-2 col-6 mx-auto">'+
-            '<input type="checkbox" class="btn-check" id="fromatob" autocomplete="off" value="fromatob">'+
-            '<label class="btn btn-outline-success" for="fromatob">Wybierz trase</label>'
-            +'</div>'    
+            '</div>'
+            
+               
         );
     }
