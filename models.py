@@ -13,7 +13,7 @@ class Border(base):
     __table_args__ = {'schema': 'dataapp'}
 
 class Poly(base):
-    __tablename__ = 'Poly' 
+    __tablename__ = 'polygon' 
     id = Column(Integer, primary_key = True)
     fid = Column(String())
     emergency = Column(String())
@@ -21,7 +21,7 @@ class Poly(base):
     __table_args__ = {'schema': 'dataapp'}
 
 class services(base):
-    __tablename__ = 'jednostki'
+    __tablename__ = 'force'
     id = Column(Integer, primary_key = True)
     geom = Column(Geometry('POINT',4326))
     fid = Column(String())
